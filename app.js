@@ -6,13 +6,13 @@ var Campground = require("./models/campgrounds");
 var seedDB = require("./seeds");
 var Comment = require("./models/comment");
 var passport = require("passport");
+var methodOverride = require ('method-override')
 
 
 app.use(bodyParser.urlencoded({extented: true}));
 app.set("view engine", 'ejs');
 app.use(express.static(__dirname + "/public"));
-
-
+app.use(methodOverride("_method"));
 
 // passport config //
 

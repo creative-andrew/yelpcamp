@@ -18,6 +18,14 @@
          <div class="caption-full"> <h4 class="pull-right">$9.00/night</h4>   <h4>  <a><%= foundcampground.name %></a> </h4> 
          <p>  <%= foundcampground.description %> </p>
          <p> Submitted by  <%= foundcampground.author.username %> </p>
+          <% if (currentUser) {%>
+         <% if (foundcampground.author.id.equals(currentUser._id)){%>
+         <div class="juntos">
+         <a href="/campgrounds/<%=foundcampground._id%>/edit" class="btn btn-warning margen">Edit </a> 
+         <form action="/campgrounds/<%=foundcampground._id%>?_method=delete" method="POST">
+             <button class="btn btn-danger"> Delete </button>
+         </form></div>
+           <% } } %>
          </div>
         </div>
         <div class="well">

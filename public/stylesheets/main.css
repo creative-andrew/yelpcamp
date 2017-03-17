@@ -9,3 +9,12 @@
 .thumbnail .caption-full {
  padding: 9px;
 }
+
+.juntos {
+    display: inline-block;
+    display: -webkit-inline-box;
+}
+
+.margen {
+    margin-right: 10px;
+}
